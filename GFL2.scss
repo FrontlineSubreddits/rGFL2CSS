@@ -2,7 +2,7 @@
 /* JustanotherSuit from scratch theme, Custom Branch Of TacticalDolls 1.6 */
 
 $primaryBG: #2E2F2E;
-$userpanelText: #FC7E31;
+$userPanelText: #FC7E31;
 $textColorAlt: #dfdfdf;
 $textColor: #a5a4a4;
 $borderColor: #2a2b2a;
@@ -109,7 +109,7 @@ body #header-bottom-right {
     height: 20px!important;
 
     a {
-        color: $userpanelText
+        color: $userPanelText
     }
 }
 
@@ -210,7 +210,7 @@ div.content div.commentarea div.menuarea div.spacer div[style]{
 }
 
 #header .tabmenu li a {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
     color: #777777;
     font-size: 16px;
     line-height: 24px;
@@ -224,6 +224,15 @@ div.content div.commentarea div.menuarea div.spacer div[style]{
     box-shadow: inset 0px 0px #41413e;
     transition: box-shadow .15s linear .07s;
     border:none;
+
+    &:active {
+        color: #777777;
+        box-shadow: inset 0px -36px #777777!important;
+        transition: all 0s;
+    }
+    &:hover {
+        color: $userPanelText;
+    }
 }
 
 #header .tabmenu li a:active {
@@ -233,8 +242,8 @@ div.content div.commentarea div.menuarea div.spacer div[style]{
 }
 
 #header .tabmenu li.selected a{
-    color:$userpanelText;
-    border-bottom: $userpanelText 2px solid;
+    color:$userPanelText;
+    border-bottom: $userPanelText 2px solid;
 }
 
 /* -- END Tab Menu -- */
@@ -278,7 +287,7 @@ div.content div.commentarea div.menuarea div.spacer div[style]{
 
 .link .midcol .score {
     background-color: $borderAlt;
-    box-shadow: 0 1px $primaryBG, inset 0 0 2px $userpanelText;
+    box-shadow: 0 1px $primaryBG, inset 0 0 2px $userPanelText;
     color: $textColorAlt;
     font-weight: normal;
     text-align: center;
@@ -311,7 +320,7 @@ div.content div.commentarea div.menuarea div.spacer div[style]{
 }
 
 .link .flat-list.buttons li.first a {
-    color: $userpanelText;
+    color: $userPanelText;
 }
 
 .link .tagline, .link .flat-list.buttons li a, .link .domain a, .link .domain {
@@ -503,7 +512,7 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
     text-align: left;
     text-decoration: none;
     margin: 0;
-    color: $userpanelText;
+    color: $userPanelText;
     background-color: $primaryBG;
     font-size: 13px;
     border: 1px solid $borderColor;
@@ -550,7 +559,7 @@ div.sidebox.create .morelink {
 
 div.sidebox.create .morelink a {
     background-color:$primaryBG;
-    color: $userpanelText;
+    color: $userPanelText;
     letter-spacing:normal;
     font-size:14px;
 }
@@ -718,7 +727,7 @@ div.subreddit-rules-page{
 }
 
 .linkflair-FlairUpcoming .linkflairlabel{
-    background-color:$userpanelText;
+    background-color:$userPanelText;
     color: $primaryBG
 }
 
@@ -1079,11 +1088,16 @@ html:lang(gg) .linkflair-FlairTeambuilding {display: none;}
 #sr-header-area {background-color: #00000059;}
 .sr-bar a {color: white;}
 .entry .buttons li a {color: $textColor;}
-.md a {color: $userpanelText;}
+.md a {
+    color: $userPanelText;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 .commentarea .menuarea .toggle a {color: $textColor;}
 .link .flat-list.buttons li a, .link .tagline {color: $textColor;}
 .dropdown.lightdrop .selected {color: $textColor;}
-.tagline a, .search-result-meta a {color: $userpanelText;}
+.tagline a, .search-result-meta a {color: $userPanelText;}
 .md {color: $textColorAlt }
 .thing .title {
     color: #159bff;
@@ -1094,7 +1108,7 @@ html:lang(gg) .linkflair-FlairTeambuilding {display: none;}
 a {color: #ff5722;}
 .spoiler-stamp {color : #ff5722 }
 .md code {
-    border: 1px solid $userpanelText;
+    border: 1px solid $userPanelText;
     background-color: $borderColor;
 }
 span.score {
@@ -1102,7 +1116,7 @@ span.score {
         color: #159bff
     }
     &.likes {
-        color: $userpanelText
+        color: $userPanelText
     }
     &.dislikes {
         color: #965EF3

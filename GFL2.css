@@ -24,23 +24,11 @@ body {
 }
 
 /* -- Animation -- */
-@-webkit-keyframes spinner {
-  from {
-    -webkit-transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(-360deg);
-  }
-}
 @keyframes spinner {
   from {
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
   to {
-    -moz-transform: rotateY(-360deg);
-    -ms-transform: rotateY(-360deg);
     transform: rotateY(-360deg);
   }
 }
@@ -53,9 +41,6 @@ div#header-bottom-left a img {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 20s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -205,6 +190,14 @@ div.content div.commentarea div.menuarea div.spacer div[style] {
   box-shadow: inset 0px 0px #41413e;
   transition: box-shadow 0.15s linear 0.07s;
   border: none;
+}
+#header .tabmenu li a:active {
+  color: #777777;
+  box-shadow: inset 0px -36px #777777 !important;
+  transition: all 0s;
+}
+#header .tabmenu li a:hover {
+  color: #FC7E31;
 }
 
 #header .tabmenu li a:active {
@@ -420,7 +413,6 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
 }
 
 .linklisting .thing .thumbnail img {
-  -webkit-transform: translateY(-50%) scale(2);
   transform: translateY(-50%) scale(2);
   margin: 50% 0% 0 0%;
   margin-left: auto;
@@ -1467,6 +1459,9 @@ html:lang(gg) .linkflair-FlairTeambuilding {
 .md a {
   color: #FC7E31;
 }
+.md a:hover {
+  text-decoration: underline;
+}
 
 .commentarea .menuarea .toggle a {
   color: #a5a4a4;
@@ -1516,6 +1511,4 @@ span.score.likes {
 }
 span.score.dislikes {
   color: #965EF3;
-}
-
-/*# sourceMappingURL=stylesheet.css.map */
+}/*# sourceMappingURL=GFL2.css.map */
