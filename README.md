@@ -1,8 +1,9 @@
 # rGFL2CSS
 CSS for r/girlsfrontline2
 
+![alt text](https://github.com/FrontlineSubreddits/rGFL2CSS/blob/master/assets/Logo.png "Girls Frontline 2: Exilium")
 -----------------------------
 
-Major changes should be tested on https://www.reddit.com/r/GFLTest/ first.
+For detailed User Flair instructions, check [/Flairs/Flair_Guide.md](https://github.com/ad3z10/rGFLCSS/blob/1e5e61180344d24a2aff47261f631dc468191d35/Flairs/Flair_Guide.md)
 
-If GFL2.css is >98kb: before applying to the subreddit minify (https://www.minifier.org/) the CSS to reduce size!
+If GFL.css is >98kb: before applying to the subreddit minify (https://www.minifier.org/) the CSS to reduce size!
