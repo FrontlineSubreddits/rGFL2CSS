@@ -1,4 +1,4 @@
-/* https://github.com/Eremeir/rGFL2CSS */
+/* https://github.com/FrontlineSubreddits/rGFL2CSS */
 /* JustanotherSuit from scratch theme, Custom Branch Of TacticalDolls 1.6 */
 body {
   color: #a5a4a4;
@@ -112,8 +112,8 @@ body #header #header-img {
 #header .redditname a {
   background-image: url(%%Logo%%);
   display: block;
-  height: 118px;
-  width: 290px;
+  height: 99px;
+  width: 486px;
   margin-left: 30px;
 }
 
