@@ -1250,6 +1250,11 @@ div.NERPageMarker {
   border: 1px solid #2a2b2a !important;
 }
 
+.new-comment .usertext-body {
+  background-color: rgba(207, 91, 47, 0.1411764706);
+  border: none;
+}
+
 /* END of RES Fixes */
 body.listing-page div.content {
   margin-right: 320px;
@@ -1511,4 +1516,4 @@ span.score.likes {
 }
 span.score.dislikes {
   color: #965EF3;
-}/*# sourceMappingURL=GFL2.css.map */
+}
