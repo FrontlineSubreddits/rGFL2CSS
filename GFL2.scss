@@ -754,19 +754,6 @@ div.subreddit-rules-page{
     text-transform: capitalize;
 }
 
-.flair {
-    overflow: hidden;
-    font-size: 0;
-    line-height: 30px;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    color: #00000000 !important;
-    width:40px;
-    height:40px;
-    margin-right:2px;
-}
-
 .flair, linkflairlabel {
     background: none;
     border: none;
@@ -806,12 +793,26 @@ div.subreddit-rules-page{
     visibility: visible;
     opacity: 1;
     transform: scale(1);
-    background-color: blue;
+    background-color: orangered;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
     box-shadow: 0 1px 0 #2e2e2c59;
     left: 45px;
     transition: all .3s cubic-bezier(0.100,4.235,0.215,0.195) .05s,background-color .45s cubic-bezier(0.100,0.235,0.215,1.195) .1s,border-right-color .45s cubic-bezier(0.100,0.235,0.215,1.195) .1s
+}
+
+.flair {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    color: #00000000 !important;
+    width:40px;
+    height:40px;
+    margin-right:2px;
+    background-repeat: no-repeat !important;
 }
 
 div.sidecontentbox .linkflairlabel {
@@ -823,6 +824,9 @@ div.sidecontentbox .linkflairlabel {
 }
 
 .flair-Ere{background:url(%%EreP90%%);width:40px;height:40px}
+.flair-Cinnamon{background:url(%%Cinnamon%%);width:40px;height:40px}
+.flair-KuroKami{background:url(%%KuroKami%%);width:40px;height:40px}
+.flair[class*="-01-"]{background-image:url(%%batch01%%);}.flair-01-0-Baghead{background-position: 0 0px;}.flair-01-1-Male{background-position: 0 -40px;}.flair-01-2-Female{background-position: 0 -80px;}.flair-01-3-Mayling{background-position: 0 -120px;}.flair-01-4-Groza{background-position: 0 -160px;}.flair-01-5-Nemesis{background-position: 0 -200px;}.flair-01-6-Krolik{background-position: 0 -240px;}.flair-01-7-Colphne{background-position: 0 -280px;}.flair-01-8-Vepley{background-position: 0 -320px;}.flair-01-9-Peritya{background-position: 0 -360px;}.flair-01-10-Sharkry{background-position: 0 -400px;}.flair-01-11-Cheetah{background-position: 0 -440px;}.flair-01-12-Tololo{background-position: 0 -480px;}.flair-01-12-Sabrina {background-position: 0 -520px;}.flair-01-13-Nagant{background-position: 0 -560px;}.flair-01-14-Qiongjiu{background-position: 0 -600px;}.flair-01-15-Mosin-Nagant{background-position: 0 -640px;}.flair-01-16-Ksenia{background-position: 0 -680px;}.flair-01-17-Littara{background-position: 0 -720px;}.flair-01-18-Ullrid{background-position: 0 -760px;}.flair-01-19-Lotta{background-position: 0 -800px;}.flair-01-20-Suomi{background-position: 0 -840px;}
 
 /* END of Flairs */
 
@@ -912,6 +916,9 @@ div.NERPageMarker{
 .new-comment .usertext-body {
     background-color: #cf5b2f24;
     border: none;
+}
+.usertext.grayed .usertext-body {
+    background-color: transparent;
 }
 
 /* END of RES Fixes */
@@ -1114,8 +1121,9 @@ a {color: #ff5722;}
 .spoiler-stamp {color : #ff5722 }
 .md code {
     border: 1px solid $userPanelText;
-    background-color: $borderColor;
+    background-color: $borderColor!important; 
 }
+
 span.score {
     &.unvoted {
         color: #159bff
@@ -1126,4 +1134,25 @@ span.score {
     &.dislikes {
         color: #965EF3
     }
+}
+
+body.mod-toolbox-rd .tb-general-button, body.mod-toolbox-rd li a.tb-general-button, body.mod-toolbox-rd .tb-bracket-button {
+    color: $userPanelText;
+    border: none;
+}
+
+.action-reason {
+    color: $userPanelText;
+    background-color: $borderAlt;
+}
+
+.usertext.border .usertext-body {
+    background-color: transparent;
+}
+
+.thing.spam {
+    background-color: #4a1307;
+}
+.res-commentBoxes .comment.spam {
+    background-image: linear-gradient(#4a1307, #4a1307);
 }
