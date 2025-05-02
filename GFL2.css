@@ -876,6 +876,38 @@ div.sidecontentbox .linkflairlabel {
   background-position: 0 -840px;
 }
 
+.flair-01-21-Papasha {
+  background-position: 0 -880px;
+}
+
+.flair-01-22-Makiatto {
+  background-position: 0 -920px;
+}
+
+.flair-01-23-Daiyan {
+  background-position: 0 -960px;
+}
+
+.flair-01-24-Dushevnaya {
+  background-position: 0 -1000px;
+}
+
+.flair-01-25-Centaureissi {
+  background-position: 0 -1040px;
+}
+
+.flair-01-26-Klukai {
+  background-position: 0 -1080px;
+}
+
+.flair-01-27-Mechty {
+  background-position: 0 -1120px;
+}
+
+.flair-01-28-Vector {
+  background-position: 0 -1160px;
+}
+
 /* END of Flairs */
 /* Comment faces */
 .md a[href^="#"]:not([href^="#/"]):not([href^="#wiki"]) {
@@ -1324,10 +1356,6 @@ a[href$="#Peritya3D"] {
 
 /* END of Comment faces */
 /* RES Fixes */
-div.RES-keyNav-activeElement {
-  background-color: transparent !important;
-}
-
 div.thing div.entry.res-selected, div.thing div.entry.res-selected .md-container, div#RESShortcutsEditContainer, div#RESShortcutsSort, div#RESShortcutsRight, div#RESShortcutsLeft, div#RESShortcutsAdd {
   background-image: none !important;
   background-color: transparent !important;
@@ -1647,4 +1675,8 @@ body.mod-toolbox-rd .tb-general-button, body.mod-toolbox-rd li a.tb-general-butt
 
 .res-commentBoxes .comment.spam {
   background-image: linear-gradient(#4a1307, #4a1307);
-}/*# sourceMappingURL=GFL2.css.map */
+}
+
+.md blockquote, .md del {
+  color: #a5a4a4;
+}
