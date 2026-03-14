@@ -968,6 +968,30 @@ div.sidecontentbox .linkflairlabel {
   background-position: 0 -1760px;
 }
 
+.flair-01-45-Lewis {
+  background-position: 0 -1800px;
+}
+
+.flair-01-46-Sakura {
+  background-position: 0 -1840px;
+}
+
+.flair-01-47-Balthilde {
+  background-position: 0 -1880px;
+}
+
+.flair-01-48-Alva {
+  background-position: 0 -1920px;
+}
+
+.flair-01-49-Voymastina {
+  background-position: 0 -1960px;
+}
+
+.flair-01-50-Kalina {
+  background-position: 0 -2000px;
+}
+
 /* END of Flairs */
 /* Comment faces */
 .md a[href^="#"]:not([href^="#/"]):not([href^="#wiki"]) {
