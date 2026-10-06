@@ -1,6 +1,5 @@
 /* https://github.com/FrontlineSubreddits/rGFL2CSS */
 /* JustanotherSuit from scratch theme, Custom Branch Of TacticalDolls 1.6 */
-
 $primaryBG: #2E2F2E;
 $userPanelText: #FC7E31;
 $textColorAlt: #dfdfdf;
@@ -9,241 +8,227 @@ $borderColor: #2a2b2a;
 $borderAlt: #4b4d4b;
 $superShadow: #555755;
 
+@mixin panel {
+	background-color: $primaryBG;
+	border: 1px solid $borderColor;
+	border-top: 1px solid $borderAlt;
+	box-shadow: inset 0 1px $superShadow;
+}
+@mixin thumb70 {
+	width: 70px;
+	height: 70px;
+	background-position: 0;
+	background-size: auto;
+}
+
 body {
-    color: $textColor;
-    background: -webkit-rgb(31, 31, 31);
-    background: -o-rgb(31, 31, 31);
-    background: -ms-rgb(31, 31, 31);
-    background: -moz-rgb(31, 31, 31);
-    background: rgb(31, 31, 31);
-    background-attachment: fixed;
-    background-image: url(%%background%%);
+	color: $textColor;
+	background: rgb(31, 31, 31);
+	background-attachment: fixed;
+	background-image: url(%%background%%);
 }
 
 ::-webkit-scrollbar {
-    background-color: $primaryBG;
-    width: 12px;
-    height: 12px;
+	background-color: $primaryBG;
+	width: 12px;
+	height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $primaryBG;
-    box-shadow: inset 0 0 0 3px $borderColor;
-    border-radius: 0px;
+	background-color: $primaryBG;
+	box-shadow: inset 0 0 0 3px $borderColor;
+	border-radius: 0px;
 }
 
 /* -- Animation -- */
 
-@-webkit-keyframes spinner { 
-    from 
-    { 
-        -webkit-transform: rotateY(0deg); 
-    } 
-    to { 
-        -webkit-transform: rotateY(-360deg); 
-    } 
-}
-
-@keyframes spinner { 
-    from { 
-        -moz-transform: rotateY(0deg); 
-        -ms-transform: rotateY(0deg); 
-        transform: rotateY(0deg); 
-    } 
-    to 
-    { 
-        -moz-transform: rotateY(-360deg); 
-        -ms-transform: rotateY(-360deg); 
-        transform: rotateY(-360deg); 
-    } 
+@keyframes spinner {
+	from {
+		transform: rotateY(0deg);
+	}
+	to
+	{
+		transform: rotateY(-360deg);
+	}
 }
 
 div#header-bottom-left a img {
-    -webkit-animation-name: spinner; 
-    -webkit-animation-timing-function: linear; 
-    -webkit-animation-iteration-count: infinite; 
-    -webkit-animation-duration: 20s; 
-    animation-name: spinner; 
-    animation-timing-function: linear; 
-    animation-iteration-count: infinite; 
-    animation-duration: 20s; 
-    -webkit-transform-style: preserve-3d; 
-    -moz-transform-style: preserve-3d; 
-    -ms-transform-style: preserve-3d; 
-    transform-style: preserve-3d;
-} 
+	-webkit-animation-name: spinner;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 20s;
+	animation-name: spinner;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 20s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
 
 /* -- END of Animation -- */
 
 .res-navTop #header-bottom-right:before {
-    border-top: solid 14px #0000004d!Important;
-    border-right: solid 14px #0000004d!Important;
-    border-left: solid 14px transparent!Important;
-    border-bottom: solid 14px transparent!Important;
+	border-top: solid 14px #0000004d!Important;
+	border-right: solid 14px #0000004d!Important;
+	border-left: solid 14px transparent!Important;
+	border-bottom: solid 14px transparent!Important;
 }
 
 #header-bottom-right:before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    display: block;
-    width: 0px;
-    margin: -4px -28px;
-    right: 25px;
-    background: #00000000;
-    border-top: solid 14px transparent;
-    border-right: solid 14px #0000004d;
-    border-left: solid 14px transparent;
-    border-bottom: solid 14px #0000004d;
+	content: "";
+	position: absolute;
+	left: 0px;
+	display: block;
+	width: 0px;
+	margin: -4px -28px;
+	right: 25px;
+	background: transparent;
+	border-top: solid 14px transparent;
+	border-right: solid 14px #0000004d;
+	border-left: solid 14px transparent;
+	border-bottom: solid 14px #0000004d;
 }
 
 body #header-bottom-right {
-    position: absolute;
-    right: 0px;
-    background-color: transparent;
-    padding: 4px 8px!Important;
-    border-top-left-radius: 0px;
-    font-size: 12px;
-    background-color: #0000004d;
-    line-height: 20px;
-    height: 20px!important;
+	position: absolute;
+	right: 0px;
+	background-color: transparent;
+	padding: 4px 8px!Important;
+	border-top-left-radius: 0px;
+	font-size: 12px;
+	background-color: #0000004d;
+	line-height: 20px;
+	height: 20px!important;
 
-    a {
-        color: $userPanelText
-    }
+	a {
+		color: $userPanelText
+	}
 }
 
 body #header{
-    height:200px;
-    border:none;
-    background: -webkit-rgb(31, 31, 31);
-    background: -o-rgb(31, 31, 31);
-    background: -ms-rgb(31, 31, 31);
-    background: -moz-rgb(31, 31, 31);
-    background: rgb(31, 31, 31);
-    background-image:url(%%Header%%)
+	height:200px;
+	border:none;
+	background: -webkit-rgb(31, 31, 31);
+	background: -o-rgb(31, 31, 31);
+	background: -ms-rgb(31, 31, 31);
+	background: -moz-rgb(31, 31, 31);
+	background: rgb(31, 31, 31);
+	background-image:url(%%Header%%)
 }
 
 body #header #header-img {
-    height: 130px;
-    width: 130px;
-    margin-top: 20px;
+	height: 130px;
+	width: 130px;
+	margin-top: 20px;
 }
 
 #header .redditname {
-    position: absolute;
-    display: block;
-    top:40px;
-    font-size:0;
-    height: 100px;
-    width: 251px;
-    left: 110px;
+	position: absolute;
+	display: block;
+	top:40px;
+	font-size:0;
+	height: 100px;
+	width: 251px;
+	left: 110px;
 }
 
 #header .redditname a {
-    background-image: url(%%Logo%%);
-    display: block;
-    height: 99px;
-    width: 486px;
-    margin-left: 30px;
+	background-image: url(%%Logo%%);
+	display: block;
+	height: 99px;
+	width: 486px;
+	margin-left: 30px;
 }
 
 #header .tabmenu {
-    top:163px;
-    position: absolute;
-    display: block;
-    padding: 0.5em 0px 0.5em 0px;
-    margin: 0;
-    margin-left:2px;
+	top:163px;
+	position: absolute;
+	display: block;
+	padding: 0.5em 0px 0.5em 0px;
+	margin: 0;
+	margin-left:2px;
 }
 
 /* -- Tab Menu -- */
 
 body.top-page div.content div.menuarea, body.comments-page div.content div.menuarea {
-    margin: 20px 0px 0px 0px;
-    background-color: $primaryBG;
-    border: 1px solid $borderColor;
-    border-top: 1px solid $borderAlt;
-    border-bottom:none;
-    box-shadow: inset 0 1px $superShadow;
-    padding: 3px 0px 3px 10px;
+	@include panel;
+	margin: 20px 0px 0px 0px;
+	border-bottom:none;
+	padding: 3px 0px 3px 10px;
 }
 
-/* Body Table Adjustments 
+/* Body Table Adjustments
 body.listing-page div.sitetable, body.comments-page div.sitetable {
-    margin-top:74px;
+	margin-top:74px;
 }
 body.comments-page div.sitetable{
-    margin-right:320px;
+	margin-right:320px;
 }
 body.top-page div.sitetable {
-    margin-top:28px;
+	margin-top:28px;
 }
 body.comments-page div.commentarea div.sitetable {
-    margin:0px;
-    
+	margin:0px;
+
 }*/
 
 div.content {
-    margin-top:35px
+	margin-top:35px
 }
 
 body.comments-page div.sitetable.linklisting{
-    margin-right:320px;
+	margin-right:320px;
 }
 
 /* Dropdown fix */
 div.content div.menuarea div.spacer div[style]{
-    /*position: sticky;*/
-    width: 200px;
-    /*left: 58px;*/
+	/*position: sticky;*/
+	width: 200px;
+	/*left: 58px;*/
 }
 
 div.content div.commentarea div.menuarea div.spacer div[style]{
-    position: absolute;
+	position: absolute;
 }
 
 
 /* Hide Tabs - Controversial, Gilded, Etc */
 #header .tabmenu li:nth-of-type(3), #header .tabmenu li:nth-of-type(4), #header .tabmenu li:nth-of-type(6), #header .tabmenu li:nth-of-type(7), #header .tabmenu li.tb-queuetools-tab {
-    display:none;
+	display:none;
 }
 
 #header .tabmenu li a {
-    background-color: #00000000;
-    color: #777777;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0px;
-    padding: 7px .8em 8px .8em;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-family: Segoe UI,Arial,Helvetica,Verdana,sans-serif;
-    position: relative;
-    box-shadow: inset 0px 0px #41413e;
-    transition: box-shadow .15s linear .07s;
-    border:none;
+	background-color: transparent;
+	color: #777777;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0px;
+	padding: 7px .8em 8px .8em;
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: Segoe UI,Arial,Helvetica,Verdana,sans-serif;
+	position: relative;
+	box-shadow: inset 0px 0px #41413e;
+	transition: box-shadow .15s linear .07s;
+	border:none;
 
-    &:active {
-        color: #777777;
-        box-shadow: inset 0px -36px #777777!important;
-        transition: all 0s;
-    }
-    &:hover {
-        color: $userPanelText;
-    }
-}
-
-#header .tabmenu li a:active {
-    color: #777777;
-    box-shadow: inset 0px -36px #777777!important;
-    transition: all 0s;
+	&:active {
+		color: #777777;
+		box-shadow: inset 0px -36px #777777!important;
+		transition: all 0s;
+	}
+	&:hover {
+		color: $userPanelText;
+	}
 }
 
 #header .tabmenu li.selected a{
-    color:$userPanelText;
-    border-bottom: $userPanelText 2px solid;
+	color:$userPanelText;
+	border-bottom: $userPanelText 2px solid;
 }
 
 /* -- END Tab Menu -- */
@@ -255,177 +240,158 @@ div.content div.commentarea div.menuarea div.spacer div[style]{
 /* --- A Submission --- */
 
 .link {
-    background-color: $primaryBG;
-    font-size: 13px;
-    padding: .616em 1em;
-    padding-left: 83px;
-    min-height: 60px;
-    margin: 0 320px -1px 0;
-    border: 1px solid $borderColor;
-    border-top: 1px solid $borderColor;
-    //box-shadow: inset 0 1px $superShadow;
-    position: relative;
-    overflow: visible!important;
+	background-color: $primaryBG;
+	font-size: 13px;
+	padding: .616em 1em;
+	padding-left: 83px;
+	min-height: 60px;
+	margin: 0 320px -1px 0;
+	border: 1px solid $borderColor;
+	border-top: 1px solid $borderColor;
+	//box-shadow: inset 0 1px $superShadow;
+	position: relative;
+	overflow: visible!important;
 }
 
 .rank {
-    display:none;
+	display:none;
 }
 
 .link .midcol {
-    position: absolute;
-    top: 0px;
-    left: -7px;
-    background-color: $primaryBG;
-    box-shadow: inset 1px 1px $primaryBG, inset -1px 0px $primaryBG;
-    border-right: 1px solid $textColor;
-    display: block;
-    padding: 6px 12px 0px 12px;
-    width: 44px!important;
-    overflow: visible;
+	position: absolute;
+	top: 0px;
+	left: -7px;
+	background-color: $primaryBG;
+	box-shadow: inset 1px 1px $primaryBG, inset -1px 0px $primaryBG;
+	border-right: 1px solid $textColor;
+	display: block;
+	padding: 6px 12px 0px 12px;
+	width: 44px!important;
+	overflow: visible;
 }
 
 .link .midcol .score {
-    background-color: $borderAlt;
-    box-shadow: 0 1px $primaryBG, inset 0 0 2px $userPanelText;
-    color: $textColorAlt;
-    font-weight: normal;
-    text-align: center;
-    min-width: 44px;
-    padding: .3em 0px;
-    margin: 6px 0px;
-    border-radius: 1px;
+	background-color: $borderAlt;
+	box-shadow: 0 1px $primaryBG, inset 0 0 2px $userPanelText;
+	color: $textColorAlt;
+	font-weight: normal;
+	text-align: center;
+	min-width: 44px;
+	padding: .3em 0px;
+	margin: 6px 0px;
+	border-radius: 1px;
 }
 
 .pinned > .link {
-    padding-left: 70px;
-    min-height: 132px;
+	padding-left: 70px;
+	min-height: 132px;
 }
 
 /* -- Comments -- */
 
 .commentarea .sitetable {
-    background-color: $primaryBG;
-    border: 1px solid $superShadow;
-    box-shadow: inset 1px 1px $borderAlt, inset -1px -1px $borderAlt;
-    padding: 0px 0px;
+	background-color: $primaryBG;
+	border: 1px solid $superShadow;
+	box-shadow: inset 1px 1px $borderAlt, inset -1px -1px $borderAlt;
+	padding: 0px 0px;
 }
 
 .link .usertext-body .md {
-    background-color: $borderColor;
-    border: 1px solid $superShadow;
-    border-radius: 1px;
-    box-shadow: 0 1px $borderAlt, 0 -1px $borderAlt, inset 10px 0 $borderAlt;
-    padding: .8em 1.5em .8em 1.6em;
+	background-color: $borderColor;
+	border: 1px solid $superShadow;
+	border-radius: 1px;
+	box-shadow: 0 1px $borderAlt, 0 -1px $borderAlt, inset 10px 0 $borderAlt;
+	padding: .8em 1.5em .8em 1.6em;
 }
 
 .link .flat-list.buttons li.first a {
-    color: $userPanelText;
+	color: $userPanelText;
 }
 
 .link .tagline, .link .flat-list.buttons li a, .link .domain a, .link .domain {
-    font-family: verdana,arial,helvetica,sans-serif;
-    font-size: 11px!important;
-    font-weight: normal;
-    color: $superShadow;
-    line-height: 18px;
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 11px!important;
+	font-weight: normal;
+	color: $superShadow;
+	line-height: 18px;
 }
 
 body.comments-page div.content div.menuarea {
-    position: inherit;
-    box-shadow: none;
-    padding:0;
-    border:none;
-    margin: 0 310px 10px 10px;
-    top:auto;
-    width:auto;
-    overflow:visible;
+	position: inherit;
+	box-shadow: none;
+	padding:0;
+	border:none;
+	margin: 0 310px 10px 10px;
+	top:auto;
+	width:auto;
+	overflow:visible;
 }
 
 .commentarea {
-    background-color: $primaryBG;
+	background-color: $primaryBG;
 	padding: .616em 1em;
 	margin: 0px 320px -1px 0;
 	border: 1px solid $borderColor;
 	box-shadow: inset 0 1px $superShadow;
-    position: relative;
-    overflow: visible!important;
+	position: relative;
+	overflow: visible!important;
 }
 
 .commentarea .infobar {
-    padding:5px;
-    padding-bottom:5px;
+	padding:5px;
+	padding-bottom:5px;
 }
 
 .commentarea .comment .md {
-  margin: 7px 0px 4px 0px;
-  padding:2px;
+	margin: 7px 0px 4px 0px;
+	padding:2px;
 }
 
 .comment {
-  margin: 0px 0px;
-  padding: 8px 0px 0px 8px;
+	margin: 0px 0px;
+	padding: 8px 0px 0px 8px;
 }
 
 .comment .entry {
-    position: relative; 
-    padding-bottom:5px;
+	position: relative;
+	padding-bottom:5px;
 }
 
 .commentarea .comment .flair {
-  left: 0px;
-  top: 0px;
-  z-index: 2;
-  box-shadow: 0 0 0 1px #9b9c8e;
-  margin: 1px 5px 0px 1px;
-  float:left;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+	box-shadow: 0 0 0 1px #9b9c8e;
+	margin: 1px 5px 0px 1px;
+	float:left;
 }
 
 .comment .child, .res .res-commentBoxes .comment .child {
-  border-left: 1px solid #aeafa480!important;
-  box-shadow: -1px 0px #ffffff33,0 -1px $borderAlt,0 -2px #ffffff33, 0 1px $borderAlt, 0 2px #ffffff33!important;
-  margin: 0px 0px 0px 24px!important;
+	border-left: 1px solid #aeafa480!important;
+	box-shadow: -1px 0px #ffffff33,0 -1px $borderAlt,0 -2px #ffffff33, 0 1px $borderAlt, 0 2px #ffffff33!important;
+	margin: 0px 0px 0px 24px!important;
 }
 
-.comment,
-.comment .comment,
-.comment .comment .comment,
-.comment .comment .comment .comment,
-.comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {background-color: #24252466!important;}
-
-.res .res-commentBoxes .comment,
-.res .res-commentBoxes .comment .comment,
-.res .res-commentBoxes .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {background-color: #24252466!important;box-shadow: inset 0px 0px #D9DDE2!important;margin: 0px!important}
-
-div.sitetable div.comment,
-div.sitetable div.comment .comment,
-div.sitetable div.comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {background-color: #24252466!important;;}
+@function nested-selectors($root, $depth, $child: ".comment") {
+	$list: ();
+	$sel: $root;
+	@for $i from 1 through $depth {
+		$list: append($list, unquote($sel), comma);
+		$sel: "#{$sel} #{$child}";
+	}
+	@return $list;
+}
+#{nested-selectors(".comment", 12)} {
+	background-color: #24252466 !important;
+}
+#{nested-selectors(".res .res-commentBoxes .comment", 12)} {
+	background-color: #24252466 !important;
+	box-shadow: inset 0px 0px #D9DDE2 !important;
+	margin: 0px !important;
+}
+#{nested-selectors("div.sitetable div.comment", 13)} {
+	background-color: #24252466 !important;
+}
 
 
 /* -- END of Comments -- */
@@ -435,58 +401,46 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
 /* --- Thumbnails --- */
 
 .thumbnail.default, .link .thumbnail.self {
-    background-image:url(%%Thumb-Preview%%);
-    background-position: -2px 1px;
-    background-size: auto!important;
-    background-color: #acad9f;
-    border-color: #74756d;
-    border-bottom-color: #52524c;
-    height:70px;
+	background-image:url(%%Thumb-Preview%%);
+	background-position: -2px 1px;
+	background-size: auto!important;
+	background-color: #acad9f;
+	border-color: #74756d;
+	border-bottom-color: #52524c;
+	height:70px;
 }
 
 /* Thumb Zoom */
 .thumbnail {
-    height:70px;
+	height:70px;
 }
 
 .linklisting .thing .thumbnail img {
-    -webkit-transform: translateY(-50%) scale(2);
-    transform: translateY(-50%) scale(2);
-    margin: 50% 0% 0 0%;
-    margin-left: auto;
-    margin-right: auto;
+	-webkit-transform: translateY(-50%) scale(2);
+	transform: translateY(-50%) scale(2);
+	margin: 50% 0% 0 0%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .linklisting .thing.stickied .thumbnail {
-    background-image: url(%%Thumb-Announcements%%);
-    background-position: 0px;
-    background-size: auto;
-    height: 70px;
-    width: 70px
+	@include thumb70;
+	background-image: url(%%Thumb-Announcements%%);
 }
 
 .link .thumbnail.self{
-    background-image:url(%%thumbnail%%);
-    background-position: 0px;
-    background-size: auto;
-    height: 70px;
-    width: 70px
+	@include thumb70;
+	background-image:url(%%thumbnail%%);
 }
 
 .thumbnail.nsfw {
-    background-image: url(%%Thumb-NSFW%%);
-    background-position: 0px;
-    background-size: auto;
-    height: 70px;
-    width: 70px
+	@include thumb70;
+	background-image: url(%%Thumb-NSFW%%);
 }
 
 .thumbnail.spoiler {
-    background-image: url(%%Thumb-Spoilers%%);
-    background-position: 0px;
-    background-size: auto;
-    height: 70px;
-    width: 70px
+	@include thumb70;
+	background-image: url(%%Thumb-Spoilers%%);
 }
 
 /* --- END of Thumbnails --- */
@@ -498,187 +452,175 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
 /* -- Announcements Bar -- */
 
 .side .md ol {
-    padding-left:30px;
+	padding-left:30px;
 }
 
 .side .md h6 {
-    position: absolute;
-    top: 203px;
-    left: 5px;
-    right: 315px;
-    height: 20px;
-    white-space: pre-line;
-    padding: 4px 0 4px 10px;
-    text-align: left;
-    text-decoration: none;
-    margin: 0;
-    color: $userPanelText;
-    background-color: $primaryBG;
-    font-size: 13px;
-    border: 1px solid $borderColor;
-    border-top: 1px solid $borderAlt;
-    box-shadow: inset 0 1px $superShadow;
-    margin-right:5px;
-    font-weight: bold;
+	@include panel;
+	position: absolute;
+	top: 203px;
+	left: 5px;
+	right: 315px;
+	height: 20px;
+	white-space: pre-line;
+	padding: 4px 0 4px 10px;
+	text-align: left;
+	text-decoration: none;
+	margin: 0;
+	color: $userPanelText;
+	font-size: 13px;
+	margin-right:5px;
+	font-weight: bold;
 }
 
 body.comments-page .side .md h6{
-    right: 320px;
+	right: 320px;
 }
 
 /* -- END of Announcements Bar -- */
 
 div.side .login-form-side {
-    background-color: $primaryBG;
-    border: 1px solid $borderColor;
-    border-top: 1px solid $borderAlt;
-    box-shadow: inset 0 1px $superShadow;
+	@include panel;
 }
 
 
-.morelink, .morelink:hover, .disabled .morelink, .disabled .morelink:hover {  
-    background:none;
-    background-image:url(%%Submission-Redesign%%);
-    background-position:top;
-    height:78px;
-    width:300px;
-    border:none;
-    box-shadow:none;
-    
+.morelink, .morelink:hover, .disabled .morelink, .disabled .morelink:hover {
+	background:none;
+	background-image:url(%%Submission-Redesign%%);
+	background-position:top;
+	height:78px;
+	width:300px;
+	border:none;
+	box-shadow:none;
+
 }
 
 .morelink a {
-    font-size:0px;
+	font-size:0px;
 }
 
 div.sidebox.create .morelink {
-    background-color:$primaryBG;
-    border: 1px solid $borderColor;
-    height:auto;
+	background-color:$primaryBG;
+	border: 1px solid $borderColor;
+	height:auto;
 }
 
 div.sidebox.create .morelink a {
-    background-color:$primaryBG;
-    color: $userPanelText;
-    letter-spacing:normal;
-    font-size:14px;
+	background-color:$primaryBG;
+	color: $userPanelText;
+	letter-spacing:normal;
+	font-size:14px;
 }
 
 div.side .titlebox, .infobar, #searchexpando {
-    background-color: $primaryBG;
-    padding:12px;
-    padding-bottom:0px;
-    border: 1px solid $borderColor;
-    box-shadow: inset 0 1px $superShadow;
-    border-radius:1px;
+	background-color: $primaryBG;
+	padding:12px;
+	padding-bottom:0px;
+	border: 1px solid $borderColor;
+	box-shadow: inset 0 1px $superShadow;
+	border-radius:1px;
 }
 
 div.side .titlebox {
-    background-image:url(%%Sidebar2000%%);
-    background-color:transparent;
-    background-repeat: round;
-    height:2027px;
-    box-shadow:none;
-    border:none;
+	background-image:url(%%Sidebar2000%%);
+	background-color:transparent;
+	background-repeat: round;
+	height:2027px;
+	box-shadow:none;
+	border:none;
 }
 
 /* Submit page Sidebar Spacing Fix */
 
 body.submit-page div.side .spacer:nth-of-type(4){
-    margin-top:20px;
-   
+	margin-top:20px;
+
 }
 
 body.submit-page div.side .spacer:nth-of-type(5){
-    margin-bottom:0px;
+	margin-bottom:0px;
 }
 
 /* Sidebar Spacing Fix */
 
 /*Hide Flair from created text and padding*/
 .titlebox .bottom {
-    padding-top:5px;
+	padding-top:5px;
 }
 
 div.bottom span.flair{
-    display:none;
+	display:none;
 }
 
 div.side .titlebox hr {
-    background: transparent;
+	background: transparent;
 }
 
 div.side .linkinfo {
-    border: none;
-    padding: 5px 0px 5px 10px;
-    background-color: transparent;
-    font-family: arial,helvetica,sans-serif;
-    color: silver;
-    font-size: larger;
-    background-image:url(%%VotingBox100%%);
-    height:90px;
+	border: none;
+	padding: 5px 0px 5px 10px;
+	background-color: transparent;
+	font-family: arial,helvetica,sans-serif;
+	color: silver;
+	font-size: larger;
+	background-image:url(%%VotingBox100%%);
+	height:90px;
 }
 
 div.side .titlebox h1 a, div.side div.usertext-body div.md, div.side .titlebox {
-    color:silver;
+	color:silver;
 }
 
 div.side div.sidebox.submit-text {
-    display:none;
+	display:none;
 }
 
 div.leavemoderator, form.leavecontributor-button, div.nub {
-    display:none;
+	display:none;
 }
 
 /* END of Sidebar */
 
 /* Rules Page */
 
-div.subreddit-rules-page{
-    margin-top:100px;
-    
-    
-    background-color: $primaryBG;
-    border: 1px solid $borderColor;
-    border-top: 1px solid $borderAlt;
-    box-shadow: inset 0 1px $superShadow;
-    
+div.subreddit-rules-page {
+	@include panel;
+	margin-top:100px;
 }
 
 /* Wikipages */
 
-.wiki-page .wiki-page-content{
-    margin:15px;
+.wiki-page .wiki-page-content {
+	margin:15px;
 }
 
 .wiki-page div.content {
-    margin-top: 75px;
-    background-color: $primaryBG;
-    display: table;
-    width: calc(100% - 327px);
-    border: 1px solid $borderColor;
+	margin-top: 75px;
+	background-color: $primaryBG;
+	display: table;
+	width: calc(100% - 327px);
+	border: 1px solid $borderColor;
 }
 
 .md td, .md th {
-    border: 1px solid #827d68;
+	border: 1px solid #827d68;
 }
 
 .wiki-page .wiki-page-content .wiki.md{
-    background:$primaryBG;
-    border-radius:5px;
+	background:$primaryBG;
+	border-radius:5px;
 }
 
 .wiki-page-content .md h1, .wiki-page-content .md h6 {
-    color: black;
+	color: black;
 }
 
 .wiki-page-content .md h2 {
-    color: black;
+	color: black;
 }
 
 .generic-table {
-    color: white!important;
+	color: white!important;
 }
 
 /* END of Wikipages*/
@@ -688,170 +630,190 @@ div.subreddit-rules-page{
 /* --- Link Flairs --- */
 
 .oc-tag {
-    float: left;
-    line-height: 19px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    border-radius: 0px;
+	float: left;
+	line-height: 19px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	border-radius: 0px;
 }
 
 .link .flair {
-    float: left;
-    margin-right: 5px;
+	float: left;
+	margin-right: 5px;
 }
 
 .linkflairlabel {
-    font-size: 10px;
-    line-height: 19px;
-    width: 125px;
-    max-width:10em;
-    height: 18px;
-    padding: 1px;
-    margin-top: 0px;
-    margin-bottom: 2px;
-    margin-right: 5px;
-    text-align: center;
-    font-weight: 700;
-    background-color: $superShadow;
-    color: $textColorAlt;
-    vertical-align: top;
-    border: none;
-    border-radius: 1px;
+	font-size: 10px;
+	line-height: 19px;
+	width: 125px;
+	max-width:10em;
+	height: 18px;
+	padding: 1px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+	margin-right: 5px;
+	text-align: center;
+	font-weight: 700;
+	background-color: $superShadow;
+	color: $textColorAlt;
+	vertical-align: top;
+	border: none;
+	border-radius: 1px;
 }
 
 .linkflair-FlairModRed .linkflairlabel{
-    width:155px;
-    max-width:155px;
-    background-color:#be1a1b;
+	width:155px;
+	max-width:155px;
+	background-color:#be1a1b;
 }
 
 .linkflair-FlairUpcoming .linkflairlabel{
-    background-color:$userPanelText;
-    color: $primaryBG
+	background-color:$userPanelText;
+	color: $primaryBG
 }
 
 .flairselector {
-    z-index: 9999999999!important;
-    text-align: center!important;
-    position: fixed;
-    top: 15%!important;
-    left: 40%!important;
-    margin-left: -125px;
-    padding: 32px!important;
-    width: 480px!important;
-    height:542px!important;
-    border: none!important;
-    border-radius: 2px;
-    box-shadow: none;
-    background: url(%%Bigger-Selector%%);
-    background-repeat: no-repeat;
+	z-index: 9999999999!important;
+	text-align: center!important;
+	position: fixed;
+	top: 15%!important;
+	left: 40%!important;
+	margin-left: -125px;
+	padding: 32px!important;
+	width: 480px!important;
+	height:542px!important;
+	border: none!important;
+	border-radius: 2px;
+	box-shadow: none;
+	background: url(%%Bigger-Selector%%);
+	background-repeat: no-repeat;
 }
 
 .flairselector h2 {
-    background:transparent;
-    color: silver;
-    text-transform: capitalize;
+	background:transparent;
+	color: silver;
+	text-transform: capitalize;
 }
 
 .flair, linkflairlabel {
-    background: none;
-    border: none;
-    border-radius: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
 }
 
 .commentarea .comment .flair {
-    box-shadow: none;
+	box-shadow: none;
 }
 
 .flair:hover {
-    overflow: visible
+	overflow: visible
 }
 
 .flair[title]:after {
-    font-size: 10px;
-    content: attr(title);
-    position: absolute;
-    color: #F4FAFF;
-    font-family: Calibri,sans-serif;
-    text-transform: uppercase;
-    top: 5px;
-    background: #fff;
-    box-shadow: 0 1px 10px #fff;
-    padding: 0 5px;
-    border-radius: 3px;
-    white-space: nowrap;
-    visibility: hidden;
-    pointer-events: none;
-    text-indent: 0;
-    border-bottom-left-radius: 18px;
-    border-top-left-radius: 18px;
-    transform: scale(0.8,0.4)
+	font-size: 10px;
+	content: attr(title);
+	position: absolute;
+	color: #F4FAFF;
+	font-family: Calibri,sans-serif;
+	text-transform: uppercase;
+	top: 5px;
+	background: #fff;
+	box-shadow: 0 1px 10px #fff;
+	padding: 0 5px;
+	border-radius: 3px;
+	white-space: nowrap;
+	visibility: hidden;
+	pointer-events: none;
+	text-indent: 0;
+	border-bottom-left-radius: 18px;
+	border-top-left-radius: 18px;
+	transform: scale(0.8,0.4)
 }
 
 .flair[title]:hover:before, .flair[title]:hover:after, .flair[title]:active:before, .flair[title]:active:after {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-    background-color: orangered;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-    box-shadow: 0 1px 0 #2e2e2c59;
-    left: 45px;
-    transition: all .3s cubic-bezier(0.100,4.235,0.215,0.195) .05s,background-color .45s cubic-bezier(0.100,0.235,0.215,1.195) .1s,border-right-color .45s cubic-bezier(0.100,0.235,0.215,1.195) .1s
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+	background-color: orangered;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	box-shadow: 0 1px 0 #2e2e2c59;
+	left: 45px;
+	transition: all .3s cubic-bezier(0.100,4.235,0.215,0.195) .05s,background-color .45s cubic-bezier(0.100,0.235,0.215,1.195) .1s,border-right-color .45s cubic-bezier(0.100,0.235,0.215,1.195) .1s
 }
 
 .flair {
-    overflow: hidden;
-    font-size: 0;
-    line-height: 30px;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    color: #00000000 !important;
-    width:40px;
-    height:40px;
-    margin-right:2px;
-    background-repeat: no-repeat !important;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 30px;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	color: transparent !important;
+	width:40px;
+	height:40px;
+	margin-right:2px;
+	background-repeat: no-repeat !important;
 }
 
 div.sidecontentbox .linkflairlabel {
-    padding: 0;
-    width: 80px;
-    font-size: 10px;
-    line-height: 15px;
-    height: 15px
+	padding: 0;
+	width: 80px;
+	font-size: 10px;
+	line-height: 15px;
+	height: 15px
 }
 
 .flair-Ere{background:url(%%EreP90%%);width:40px;height:40px}
 .flair-Cinnamon{background:url(%%Cinnamon%%);width:40px;height:40px}
 .flair-KuroKami{background:url(%%KuroKami%%);width:40px;height:40px}
-.flair[class*="-01-"]{background-image:url(%%batch01%%);}.flair-01-0-Baghead{background-position: 0 0px;}.flair-01-1-Male{background-position: 0 -40px;}.flair-01-2-Female{background-position: 0 -80px;}.flair-01-3-Mayling{background-position: 0 -120px;}.flair-01-4-Groza{background-position: 0 -160px;}.flair-01-5-Nemesis{background-position: 0 -200px;}.flair-01-6-Krolik{background-position: 0 -240px;}.flair-01-7-Colphne{background-position: 0 -280px;}.flair-01-8-Vepley{background-position: 0 -320px;}.flair-01-9-Peritya{background-position: 0 -360px;}.flair-01-10-Sharkry{background-position: 0 -400px;}.flair-01-11-Cheetah{background-position: 0 -440px;}.flair-01-12-Tololo{background-position: 0 -480px;}.flair-01-13-Sabrina {background-position: 0 -520px;}.flair-01-14-Nagant{background-position: 0 -560px;}.flair-01-15-Qiongjiu{background-position: 0 -600px;}.flair-01-16-Mosin-Nagant{background-position: 0 -640px;}.flair-01-17-Ksenia{background-position: 0 -680px;}.flair-01-18-Littara{background-position: 0 -720px;}.flair-01-19-Ullrid{background-position: 0 -760px;}.flair-01-20-Lotta{background-position: 0 -800px;}.flair-01-21-Suomi{background-position: 0 -840px;}.flair-01-22-Papasha{background-position: 0 -880px;}.flair-01-23-Makiatto{background-position: 0 -920px;}.flair-01-24-Daiyan{background-position: 0 -960px;}.flair-01-25-Dushevnaya{background-position: 0 -1000px;}.flair-01-26-Centaureissi{background-position: 0 -1040px;}.flair-01-27-Klukai{background-position: 0 -1080px;}.flair-01-28-Mechty{background-position: 0 -1120px;}.flair-01-29-Vector{background-position: 0 -1160px;}.flair-01-30-Yoohee{background-position: 0 -1200px;}.flair-01-31-Zhaohui{background-position: 0 -1240px;}.flair-01-32-Springfield{background-position: 0 -1280px;}.flair-01-33-Peri{background-position: 0 -1320px;}.flair-01-34-Faye{background-position: 0 -1360px;}.flair-01-35-Qiuhua{background-position: 0 -1400px;}.flair-01-36-Nikketa{background-position: 0 -1440px;}.flair-01-37-Belka{background-position: 0 -1480px;}.flair-01-38-Andoris{background-position: 0 -1520px;}.flair-01-39-Jiangyu{background-position: 0 -1560px;}.flair-01-40-Florence{background-position: 0 -1600px;}.flair-01-41-Lind{background-position: 0 -1640px;}.flair-01-42-Lenna{background-position: 0 -1680px;}.flair-01-43-Leva{background-position: 0 -1720px;}.flair-01-44-Robella{background-position: 0 -1760px;} .flair-01-45-Lewis{background-position: 0 -1800px;}.flair-01-46-Sakura{background-position: 0 -1840px;}.flair-01-47-Balthilde{background-position: 0 -1880px;}.flair-01-48-Alva{background-position: 0 -1920px;}.flair-01-49-Voymastina{background-position: 0 -1960px;}.flair-01-50-Kalina{background-position: 0 -2000px;}
+
+.flair[class*="-01-"] { background-image: url(%%batch01%%); }
+
+$batch01: (
+	"Baghead", "Male", "Female", "Mayling", "Groza", "Nemesis", "Krolik",
+	"Colphne", "Vepley", "Peritya", "Sharkry", "Cheetah", "Tololo", "Sabrina",
+	"Nagant", "Qiongjiu", "Mosin-Nagant", "Ksenia", "Littara", "Ullrid",
+	"Lotta", "Suomi", "Papasha", "Makiatto", "Daiyan", "Dushevnaya",
+	"Centaureissi", "Klukai", "Mechty", "Vector", "Yoohee", "Zhaohui",
+	"Springfield", "Peri", "Faye", "Qiuhua", "Nikketa", "Belka", "Andoris",
+	"Jiangyu", "Florence", "Lind", "Lenna", "Leva", "Robella", "Lewis",
+	"Sakura", "Balthilde", "Alva", "Voymastina", "Kalina", "Lainie", "Helen",
+	"Phaetusa", "Basti", "Loreley", "Cheyanne", "Liushih", "Sextans",
+	"Nemesis-Gnosis", "OTs-14", "Soppo", "Mityl"
+);
+
+@for $i from 0 to length($batch01) {
+	.flair-01-#{$i}-#{nth($batch01, $i + 1)} {
+		background-position: 0 (-40px * $i);
+	}
+}
 
 /* END of Flairs */
 
 /* Comment faces */
 
 .md a[href^="#"]:not([href^="#/"]):not([href^="#wiki"]) {
-    display: inline-block;
-    position: relative;
-    padding-top: 3px;
-    line-height: 15px;
-    text-align: center;
-    font-family: arial, sans-serif;
-    font-size: 14px;
-    color: #fff!important;
-    text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px 1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, -1px -1px 1px #000;
-    cursor: default;
-    pointer-events: none;
+	display: inline-block;
+	position: relative;
+	padding-top: 3px;
+	line-height: 15px;
+	text-align: center;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	color: #fff!important;
+	text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px 1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, -1px -1px 1px #000;
+	cursor: default;
+	pointer-events: none;
 }
 
 .md a[href^="#"]:not([href^="#/"]):not([href^="#wiki"]) > strong {
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 4px;
-    font-weight: 400
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 4px;
+	font-weight: 400
 }
 
 a[href$="#FALpat"],a[href$="#TOMMYrose"],a[href$="#KARlove"],a[href$="#SPRINGtea"],a[href$="#COLTyes"],a[href$="#IDWno"],a[href$="#IDWslap"],a[href$="#ROcry"],a[href$="#KALINAmoney"],a[href$="#KALINAgem"],a[href$="#AR15bye"],a[href$="#M16stress"],a[href$="#FNCsnacc"],a[href$="#youtalkingshit"],a[href$="#M4A1spray"],a[href$="#SOPyay"],a[href$="#KALINAhoard"],a[href$="#AR15knock"],a[href$="#HKstare"],a[href$="#M4A1melon"] {background:url(%%JPlinesticker1%%) no-repeat;height: 112px;width: 119px;}
@@ -883,215 +845,191 @@ a[href$="#NemesisSigh"]{background-position: 0 0;}a[href$="#NemesisThumbs"]{back
 /* RES Fixes */
 
 div.thing div.entry.res-selected, div.thing div.entry.res-selected .md-container, div#RESShortcutsEditContainer, div#RESShortcutsSort, div#RESShortcutsRight, div#RESShortcutsLeft, div#RESShortcutsAdd {
-    background-image: none!important;
-    background-color: transparent!important;
+	background-image: none!important;
+	background-color: transparent!important;
 }
 
 .res .res-commentBoxes .comment {
-    background-color: transparent!important;
-    border: 0!important;
-    padding: 8px 0px 0px 8px!important;
-    margin: 0px!important;
+	background-color: transparent!important;
+	border: 0!important;
+	padding: 8px 0px 0px 8px!important;
+	margin: 0px!important;
 }
 
 .icon-menu a, .titlebox form.toggle, .leavemoderator, .side, .morelink .nub, .sidebox .spacer, .morelink:hover .nub, .mlhn{
-    background:transparent;
+	background:transparent;
 }
 
 .infobar.listingsignupbar {
-    display:none!important;
+	display:none!important;
 }
 
 div.NERPageMarker{
-    background-color:$primaryBG!important;
-    border-radius:0px!important;
-    margin:0px!important;
-    border: 1px solid $borderColor!important;
+	background-color:$primaryBG!important;
+	border-radius:0px!important;
+	margin:0px!important;
+	border: 1px solid $borderColor!important;
 }
 
 .new-comment .usertext-body {
-    background-color: #cf5b2f24;
-    border: none;
+	background-color: #cf5b2f24;
+	border: none;
 }
 .usertext.grayed .usertext-body {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 /* END of RES Fixes */
 
 body.listing-page div.content {
-    margin-right: 320px;
+	margin-right: 320px;
 }
 .link{
-    margin-right: 0px;
+	margin-right: 0px;
 }
 
 .flairoptionpane {
-    max-height: 414px;
+	max-height: 414px;
 }
 
 .reddit-infobar.with-icon {
-    min-height: 45px;
-    padding-left: 55px;
-    margin-right: 320px;}
+	min-height: 45px;
+	padding-left: 55px;
+	margin-right: 320px;}
 
 /* Nightmode compatability */
 
 .res-nightmode div.morelink {
-    background:url(%%Submission-Redesign%%)!important;
-    background-color:transparent!important;
+	background:url(%%Submission-Redesign%%)!important;
+	background-color:transparent!important;
 }
 
 .res-nightmode div.sidebox, .res-nightmode div.side .titlebox {
-    background-color:transparent!important;
+	background-color:transparent!important;
 }
 
 .res-nightmode .side .usertext-body div.md ol, .res-nightmode .side div.md ul {
-    background-color:transparent!important;
+	background-color:transparent!important;
 }
 
 .res-nightmode .side .md h6, .res-nightmode div.sidebox, body.top-page.res-nightmode div.content div.menuarea, body.comments-page.res-nightmode div.content div.menuarea, .res-nightmode .commentarea, .res-nightmode .commentarea .sitetable, .res-nightmode .link .usertext-body .md{
-    border-top:1px solid #333333!important;
-    border:1px solid #333333!important;
-    background-color:transparent;
-    box-shadow:none;
+	border-top:1px solid #333333!important;
+	border:1px solid #333333!important;
+	background-color:transparent;
+	box-shadow:none;
 }
 
 .res-nightmode .link .usertext-body .md {
-    box-shadow: 0 1px #333333, 0 -1px #333333, inset 10px 0 #333333;
+	box-shadow: 0 1px #333333, 0 -1px #333333, inset 10px 0 #333333;
 }
 
 .res-nightmode .side .md h6, .res-nightmode .side .md h6 a, .res-nightmode .link .flat-list.buttons li.first a {
-    color:#cccccc!important;
+	color:#cccccc!important;
 }
 
 .res-nightmode .link, .res-nightmode .link .midcol {
-    box-shadow:none;
-    background-color:transparent;
-    border-right:none;
+	box-shadow:none;
+	background-color:transparent;
+	border-right:none;
 }
 
 .res-nightmode .link {
-    border-top:none;
-    border: 1px solid #333333;
+	border-top:none;
+	border: 1px solid #333333;
 }
 
 .res-nightmode .midcol .score, .res-nightmode div.side .titlebox, .res-nightmode .infobar, #searchexpando, .res-nightmode div.side .login-form-side {
-    background-color: #333333;
-    box-shadow:none;
+	background-color: #333333;
+	box-shadow:none;
 }
 
 .res-nightmode div#header-bottom-right{
-    background-color:#0000004d!important;
+	background-color:#0000004d!important;
 }
 
 .res-nightmode .wiki-page .wiki-page-content .wiki.md {
-    background: #262626;
+	background: #262626;
 }
 /* Comments Section */
 
 .res-nightmode .res-commentBoxes .comment .comment, .res-nightmode .res-commentBoxes .comment .comment .comment, .res-nightmode .res-commentBoxes .comment .comment .comment .comment, .res-nightmode .res-commentBoxes .comment .comment .comment .comment .comment .comment, .res-nightmode .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, .res-nightmode .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-nightmode .comment .child, .res .res-commentBoxes .comment .child {
-    background-color:transparent!important;
-    box-shadow: none!important; 
+	background-color:transparent!important;
+	box-shadow: none!important;
 }
 
 .res-nightmode .comment .child, .res-nightmode .res .res-commentBoxes .comment .child{
-    border-left:1px solid #333333!important;
+	border-left:1px solid #333333!important;
 }
 
 .res-nightmode .infobar:not(.newsletterbar), .res-nightmode .reddit-infobar, body.comments-page.res-nightmode div.content div.menuarea, .res-nightmode div.NERPageMarker {
-    background-color:transparent!important;
-    border:none!important;
+	background-color:transparent!important;
+	border:none!important;
 }
 
 .res-nightmode .commentsignupbar__container {
-    background:transparent;
+	background:transparent;
 }
 
 /* Custom Tag */
-[href$="/Micateam"]:after {
-    content: "Representative";
-    color: #ffffff!important;
-    border-color: #ffffff!important;
-    background: #1e993d url(%%Sunborn%%) no-repeat 0 0;
-    background-position: 0;
-    background-size: auto auto;
-}
+$representatives: (
+	"Micateam",
+	"GFL2EXILIUM"
+);
 
-[href$="/Micateam"]:after {
-    border-radius: 2px;
-    padding-top: 1px;
-    padding-right: 4px;
-    padding-bottom: 1px;
-    padding-left: 45px;
-    margin-left: 4px;
-    margin-right: -3px;
-    z-index: -1!important;
-    font-size: 11px!important;
-    vertical-align: text-bottom!important;
-    display: inline-block!important;
-    height: 14px!important;
-    line-height: 14px!important;
-    font-weight: normal!important;
-}
+@each $rep in $representatives {
 
-.sidecontentbox .content [href$="/Micateam"]:after {
-    display:none!important;
-}
+	[href$="/#{$rep}"]:after {
+		content: "Representative";
+		color: #ffffff !important;
+		border-color: #ffffff !important;
+		background: #1e993d url(%%Sunborn%%) no-repeat 0 0;
+		background-position: 0;
+		background-size: auto auto;
 
-[href$="/GFL2EXILIUM"]:after {
-    content: "Representative";
-    color: #ffffff!important;
-    border-color: #ffffff!important;
-    background: #1e993d url(%%Sunborn%%) no-repeat 0 0;
-    background-position: 0;
-    background-size: auto auto;
-}
+		border-radius: 2px;
+		padding-top: 1px;
+		padding-right: 4px;
+		padding-bottom: 1px;
+		padding-left: 45px;
+		margin-left: 4px;
+		margin-right: -3px;
+		z-index: -1 !important;
+		font-size: 11px !important;
+		vertical-align: text-bottom !important;
+		display: inline-block !important;
+		height: 14px !important;
+		line-height: 14px !important;
+		font-weight: normal !important;
+	}
 
-[href$="/GFL2EXILIUM"]:after {
-    border-radius: 2px;
-    padding-top: 1px;
-    padding-right: 4px;
-    padding-bottom: 1px;
-    padding-left: 45px;
-    margin-left: 4px;
-    margin-right: -3px;
-    z-index: -1!important;
-    font-size: 11px!important;
-    vertical-align: text-bottom!important;
-    display: inline-block!important;
-    height: 14px!important;
-    line-height: 14px!important;
-    font-weight: normal!important;
-}
-
-.sidecontentbox .content [href$="/GFL2EXILIUM"]:after {
-    display:none!important;
+	.sidecontentbox .content [href$="/#{$rep}"]:after {
+		display:none !important;
+	}
 }
 
 div.sidecontentbox:not(#moderation_tools) ul.content li:not(.more) {
-    height:50px;
-    display:inline-block;
-    width:100%;
+	height:50px;
+	display:inline-block;
+	width:100%;
 }
 
 .sidecontentbox:not(#moderation_tools) ul.content li span.flair {
-    float:left;
+	float:left;
 }
 
 .sidecontentbox:not(#moderation_tools) ul.content li a.author {
-    margin-left:0.5em;
+	margin-left:0.5em;
 }
 
 .ad-container {
-    display:none!important;
+	display:none!important;
 }
 
 
 /* CSS FILTER */
 
 .side .md [href$='#re'], .side .md [href$='#tp'], .side .md [href$='#tb'], .side .md [href$='#nw'], .side .md [href$='#gg'] {
-    
+
 background-color: #eee;
 color: #555;
 display: inline-block;
@@ -1103,14 +1041,14 @@ font-size: 12px;
 line-height: 18px;
 border-radius: 3px;
 margin-top: 3px;
-    
+
 }
 
 .side div.md blockquote {
-    padding-top:5px;
-    padding-bottom: 5px;
-    border:none;
-    text-align:center;
+	padding-top:5px;
+	padding-bottom: 5px;
+	border:none;
+	text-align:center;
 }
 
 html:lang(re) .linkflair-FlairFanart {display: none;}
@@ -1127,10 +1065,10 @@ html:lang(gg) .linkflair-FlairTeambuilding {display: none;}
 .sr-bar a {color: white;}
 .entry .buttons li a {color: $textColor;}
 .md a {
-    color: $userPanelText;
-    &:hover {
-        text-decoration: underline;
-    }
+	color: $userPanelText;
+	&:hover {
+		text-decoration: underline;
+	}
 }
 .commentarea .menuarea .toggle a {color: $textColor;}
 .link .flat-list.buttons li a, .link .tagline {color: $textColor;}
@@ -1138,51 +1076,51 @@ html:lang(gg) .linkflair-FlairTeambuilding {display: none;}
 .tagline a, .search-result-meta a {color: $userPanelText;}
 .md {color: $textColorAlt }
 .thing .title {
-    color: #159bff;
-    &:visited {
-        color: #965EF3;
-    }
+	color: #159bff;
+	&:visited {
+		color: #965EF3;
+	}
 }
 a {color: #ff5722;}
 .spoiler-stamp {color : #ff5722 }
 .md code {
-    border: 1px solid $userPanelText;
-    background-color: $borderColor!important; 
+	border: 1px solid $userPanelText;
+	background-color: $borderColor!important;
 }
 
 span.score {
-    &.unvoted {
-        color: #159bff
-    }
-    &.likes {
-        color: $userPanelText
-    }
-    &.dislikes {
-        color: #965EF3
-    }
+	&.unvoted {
+		color: #159bff
+	}
+	&.likes {
+		color: $userPanelText
+	}
+	&.dislikes {
+		color: #965EF3
+	}
 }
 
 body.mod-toolbox-rd .tb-general-button, body.mod-toolbox-rd li a.tb-general-button, body.mod-toolbox-rd .tb-bracket-button {
-    color: $userPanelText;
-    border: none;
+	color: $userPanelText;
+	border: none;
 }
 
 .action-reason {
-    color: $userPanelText;
-    background-color: $borderAlt;
+	color: $userPanelText;
+	background-color: $borderAlt;
 }
 
 .usertext.border .usertext-body {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 .thing.spam {
-    background-color: #4a1307;
+	background-color: #4a1307;
 }
 .res-commentBoxes .comment.spam {
-    background-image: linear-gradient(#4a1307, #4a1307);
+	background-image: linear-gradient(#4a1307, #4a1307);
 }
 
 .md blockquote, .md del {
-    color: $textColor;
+	color: $textColor;
 }

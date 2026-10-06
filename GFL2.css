@@ -2,10 +2,6 @@
 /* JustanotherSuit from scratch theme, Custom Branch Of TacticalDolls 1.6 */
 body {
   color: #a5a4a4;
-  background: -webkit-rgb(31, 31, 31);
-  background: -o-rgb(31, 31, 31);
-  background: -ms-rgb(31, 31, 31);
-  background: -moz-rgb(31, 31, 31);
   background: rgb(31, 31, 31);
   background-attachment: fixed;
   background-image: url(%%background%%);
@@ -60,7 +56,7 @@ div#header-bottom-left a img {
   width: 0px;
   margin: -4px -28px;
   right: 25px;
-  background: rgba(0, 0, 0, 0);
+  background: transparent;
   border-top: solid 14px transparent;
   border-right: solid 14px rgba(0, 0, 0, 0.3019607843);
   border-left: solid 14px transparent;
@@ -128,27 +124,27 @@ body #header #header-img {
 
 /* -- Tab Menu -- */
 body.top-page div.content div.menuarea, body.comments-page div.content div.menuarea {
-  margin: 20px 0px 0px 0px;
   background-color: #2E2F2E;
   border: 1px solid #2a2b2a;
   border-top: 1px solid #4b4d4b;
-  border-bottom: none;
   box-shadow: inset 0 1px #555755;
+  margin: 20px 0px 0px 0px;
+  border-bottom: none;
   padding: 3px 0px 3px 10px;
 }
 
-/* Body Table Adjustments 
+/* Body Table Adjustments
 body.listing-page div.sitetable, body.comments-page div.sitetable {
-    margin-top:74px;
+	margin-top:74px;
 }
 body.comments-page div.sitetable{
-    margin-right:320px;
+	margin-right:320px;
 }
 body.top-page div.sitetable {
-    margin-top:28px;
+	margin-top:28px;
 }
 body.comments-page div.commentarea div.sitetable {
-    margin:0px;
+	margin:0px;
 
 }*/
 div.content {
@@ -176,7 +172,7 @@ div.content div.commentarea div.menuarea div.spacer div[style] {
 }
 
 #header .tabmenu li a {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #777777;
   font-size: 16px;
   line-height: 24px;
@@ -198,12 +194,6 @@ div.content div.commentarea div.menuarea div.spacer div[style] {
 }
 #header .tabmenu li a:hover {
   color: #FC7E31;
-}
-
-#header .tabmenu li a:active {
-  color: #777777;
-  box-shadow: inset 0px -36px #777777 !important;
-  transition: all 0s;
 }
 
 #header .tabmenu li.selected a {
@@ -346,51 +336,17 @@ body.comments-page div.content div.menuarea {
   margin: 0px 0px 0px 24px !important;
 }
 
-.comment,
-.comment .comment,
-.comment .comment .comment,
-.comment .comment .comment .comment,
-.comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+.comment, .comment .comment, .comment .comment .comment, .comment .comment .comment .comment, .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background-color: rgba(36, 37, 36, 0.4) !important;
 }
 
-.res .res-commentBoxes .comment,
-.res .res-commentBoxes .comment .comment,
-.res .res-commentBoxes .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+.res .res-commentBoxes .comment, .res .res-commentBoxes .comment .comment, .res .res-commentBoxes .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background-color: rgba(36, 37, 36, 0.4) !important;
   box-shadow: inset 0px 0px #D9DDE2 !important;
   margin: 0px !important;
 }
 
-div.sitetable div.comment,
-div.sitetable div.comment .comment,
-div.sitetable div.comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+div.sitetable div.comment, div.sitetable div.comment .comment, div.sitetable div.comment .comment .comment, div.sitetable div.comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, div.sitetable div.comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background-color: rgba(36, 37, 36, 0.4) !important;
 }
 
@@ -420,35 +376,35 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
 }
 
 .linklisting .thing.stickied .thumbnail {
-  background-image: url(%%Thumb-Announcements%%);
-  background-position: 0px;
-  background-size: auto;
-  height: 70px;
   width: 70px;
+  height: 70px;
+  background-position: 0;
+  background-size: auto;
+  background-image: url(%%Thumb-Announcements%%);
 }
 
 .link .thumbnail.self {
-  background-image: url(%%thumbnail%%);
-  background-position: 0px;
-  background-size: auto;
-  height: 70px;
   width: 70px;
+  height: 70px;
+  background-position: 0;
+  background-size: auto;
+  background-image: url(%%thumbnail%%);
 }
 
 .thumbnail.nsfw {
-  background-image: url(%%Thumb-NSFW%%);
-  background-position: 0px;
-  background-size: auto;
-  height: 70px;
   width: 70px;
+  height: 70px;
+  background-position: 0;
+  background-size: auto;
+  background-image: url(%%Thumb-NSFW%%);
 }
 
 .thumbnail.spoiler {
-  background-image: url(%%Thumb-Spoilers%%);
-  background-position: 0px;
-  background-size: auto;
-  height: 70px;
   width: 70px;
+  height: 70px;
+  background-position: 0;
+  background-size: auto;
+  background-image: url(%%Thumb-Spoilers%%);
 }
 
 /* --- END of Thumbnails --- */
@@ -460,6 +416,10 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
 }
 
 .side .md h6 {
+  background-color: #2E2F2E;
+  border: 1px solid #2a2b2a;
+  border-top: 1px solid #4b4d4b;
+  box-shadow: inset 0 1px #555755;
   position: absolute;
   top: 203px;
   left: 5px;
@@ -471,11 +431,7 @@ div.sitetable div.comment .comment .comment .comment .comment .comment .comment 
   text-decoration: none;
   margin: 0;
   color: #FC7E31;
-  background-color: #2E2F2E;
   font-size: 13px;
-  border: 1px solid #2a2b2a;
-  border-top: 1px solid #4b4d4b;
-  box-shadow: inset 0 1px #555755;
   margin-right: 5px;
   font-weight: bold;
 }
@@ -586,11 +542,11 @@ div.leavemoderator, form.leavecontributor-button, div.nub {
 /* END of Sidebar */
 /* Rules Page */
 div.subreddit-rules-page {
-  margin-top: 100px;
   background-color: #2E2F2E;
   border: 1px solid #2a2b2a;
   border-top: 1px solid #4b4d4b;
   box-shadow: inset 0 1px #555755;
+  margin-top: 100px;
 }
 
 /* Wikipages */
@@ -751,7 +707,7 @@ div.subreddit-rules-page {
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  color: rgba(0, 0, 0, 0) !important;
+  color: transparent !important;
   width: 40px;
   height: 40px;
   margin-right: 2px;
@@ -990,6 +946,54 @@ div.sidecontentbox .linkflairlabel {
 
 .flair-01-50-Kalina {
   background-position: 0 -2000px;
+}
+
+.flair-01-51-Lainie {
+  background-position: 0 -2040px;
+}
+
+.flair-01-52-Helen {
+  background-position: 0 -2080px;
+}
+
+.flair-01-53-Phaetusa {
+  background-position: 0 -2120px;
+}
+
+.flair-01-54-Basti {
+  background-position: 0 -2160px;
+}
+
+.flair-01-55-Loreley {
+  background-position: 0 -2200px;
+}
+
+.flair-01-56-Cheyanne {
+  background-position: 0 -2240px;
+}
+
+.flair-01-57-Liushih {
+  background-position: 0 -2280px;
+}
+
+.flair-01-58-Sextans {
+  background-position: 0 -2320px;
+}
+
+.flair-01-59-Nemesis-Gnosis {
+  background-position: 0 -2360px;
+}
+
+.flair-01-60-OTs-14 {
+  background-position: 0 -2400px;
+}
+
+.flair-01-61-Soppo {
+  background-position: 0 -2440px;
+}
+
+.flair-01-62-Mityl {
+  background-position: 0 -2480px;
 }
 
 /* END of Flairs */
@@ -1575,9 +1579,6 @@ body.listing-page div.content {
   background: #1e993d url(%%Sunborn%%) no-repeat 0 0;
   background-position: 0;
   background-size: auto auto;
-}
-
-[href$="/Micateam"]:after {
   border-radius: 2px;
   padding-top: 1px;
   padding-right: 4px;
@@ -1605,9 +1606,6 @@ body.listing-page div.content {
   background: #1e993d url(%%Sunborn%%) no-repeat 0 0;
   background-position: 0;
   background-size: auto auto;
-}
-
-[href$="/GFL2EXILIUM"]:after {
   border-radius: 2px;
   padding-top: 1px;
   padding-right: 4px;
